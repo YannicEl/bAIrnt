@@ -9,7 +9,7 @@
 	},
 	"scripts": {
 		"dev": "tsx ./src/index.ts",
-		"ollama:update:bairnt": "tsx ./src/newModel.ts",
+		"ollama:update:bairnt": "tsx ./src/updateModel.ts",
 		"ollama:delete": "ollama rm BAIRNT",
 		"ollama:create": "ollama create BAIRNT -f ./Modelfile",
 		"ollama:run": "ollama run BAIRNT"
