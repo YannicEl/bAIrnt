@@ -1,12 +1,13 @@
 import { Ollama } from "ollama";
 
-const ollama = new Ollama({ host: "http://127.0.0.1:11434" });
-const message = { role: "user", content: "Wer bist du" };
+const ollama = new Ollama({ host: "http://192.168.0.28:11434" });
+const message = { role: "user", content: "Wer bist du?" };
 const response = await ollama.chat({
-	model: "llama3.1:8b",
+	model: "BAIRNT",
 	messages: [message],
 	stream: true,
 });
+
 for await (const part of response) {
 	process.stdout.write(part.message.content);
 }
